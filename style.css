@@ -1,0 +1,403 @@
+
+/* ==============================
+   FOUR SEASONS - GROUP DIRECTORY
+============================== */
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap');
+
+:root {
+    --background: #f8f6f0;
+    --surface: #fffdf8;
+    --text: #393b35;
+    --muted: #898b80;
+    --accent: #a4aa88;
+    --border: #e8e5d9;
+    --spring: #e6a9b7;
+    --summer: #e8c77c;
+    --autumn: #c58d62;
+    --winter: #9dbbc9;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--background);
+    color: var(--text);
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+/* BACKGROUND */
+
+.background-grid {
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+
+    background-image:
+        radial-gradient(circle at 10% 15%, rgba(230,169,183,0.18), transparent 25%),
+        radial-gradient(circle at 90% 20%, rgba(232,199,124,0.20), transparent 25%),
+        radial-gradient(circle at 15% 85%, rgba(197,141,98,0.14), transparent 25%),
+        radial-gradient(circle at 90% 85%, rgba(157,187,201,0.20), transparent 25%);
+}
+
+/* MAIN CONTAINER */
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 35px 45px;
+}
+
+/* HEADER */
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 25px;
+    border-bottom: 1px solid var(--border);
+}
+
+.logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 29px;
+    font-weight: 700;
+    color: var(--text);
+    text-decoration: none;
+}
+
+.logo span {
+    color: var(--autumn);
+}
+
+.system-status {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    color: #818678;
+}
+
+.status-dot {
+    width: 8px;
+    height: 8px;
+    background: #a6b98b;
+    border-radius: 50%;
+    box-shadow: 0 0 8px rgba(166,185,139,0.7);
+}
+
+/* INTRO */
+
+.intro {
+    text-align: center;
+    padding: 85px 0 75px;
+}
+
+.subtitle {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 4px;
+    color: var(--autumn);
+    margin-bottom: 20px;
+}
+
+.intro h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(38px, 7vw, 70px);
+    font-weight: 600;
+    letter-spacing: 2px;
+    line-height: 1.2;
+}
+
+.intro h1 span {
+    color: #a3aa89;
+}
+
+.description {
+    max-width: 480px;
+    margin: 18px auto 0;
+    color: var(--muted);
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+/* SEASON DECORATION */
+
+.intro::after {
+    content: "✿     ☀     🍂     ❄";
+    display: block;
+    margin-top: 28px;
+    font-size: 19px;
+    letter-spacing: 10px;
+    opacity: 0.75;
+}
+
+/* MEMBER SECTION */
+
+.member-section {
+    padding-bottom: 65px;
+}
+
+.section-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid var(--border);
+}
+
+.section-heading h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 21px;
+    font-weight: 600;
+}
+
+.section-heading span {
+    font-size: 10px;
+    letter-spacing: 1.5px;
+    color: var(--muted);
+    font-weight: 700;
+}
+
+/* MEMBER GRID */
+
+.member-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+/* MEMBER CARD */
+
+.member-card {
+    display: block;
+    text-decoration: none;
+    color: var(--text);
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 15px;
+    overflow: hidden;
+    transition: 0.35s ease;
+    box-shadow: 0 5px 20px rgba(70,65,45,0.035);
+}
+
+.member-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px rgba(70,65,45,0.12);
+    border-color: #c6c9b0;
+}
+
+/* PHOTO */
+
+.photo-container {
+    height: 270px;
+    position: relative;
+    overflow: hidden;
+    background: #e9e6dc;
+}
+
+.photo-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+.member-card:hover .photo-container img {
+    transform: scale(1.06);
+}
+
+/* PHOTO DECORATION */
+
+.member-number {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background: rgba(255,253,248,0.9);
+    color: #686b5c;
+    padding: 7px 12px;
+    border-radius: 20px;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.view-icon {
+    position: absolute;
+    right: 15px;
+    bottom: 15px;
+    width: 37px;
+    height: 37px;
+    background: rgba(255,253,248,0.92);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.member-card:hover .view-icon {
+    background: #a4aa88;
+    color: white;
+}
+
+/* MEMBER INFORMATION */
+
+.member-info {
+    padding: 20px;
+}
+
+.member-role {
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: #a5a58f;
+    margin-bottom: 9px;
+}
+
+.member-info h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 19px;
+    font-weight: 600;
+    margin-bottom: 13px;
+}
+
+.member-status {
+    display: inline-block;
+    font-size: 9px;
+    letter-spacing: 1px;
+    font-weight: 700;
+    color: #78886c;
+    background: #edf1e5;
+    padding: 6px 11px;
+    border-radius: 20px;
+}
+
+/* FOOTER */
+
+footer {
+    border-top: 1px solid var(--border);
+    padding: 22px 0;
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    color: var(--muted);
+    font-size: 9px;
+    letter-spacing: 1.5px;
+    font-weight: 600;
+}
+
+/* RESPONSIVE TABLET */
+
+@media (max-width: 850px) {
+    .container {
+        padding: 25px;
+    }
+
+    .member-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 18px;
+    }
+
+    .photo-container {
+        height: 250px;
+    }
+}
+
+/* RESPONSIVE MOBILE */
+
+@media (max-width: 550px) {
+    .container {
+        padding: 20px 16px;
+    }
+
+    .header {
+        padding-bottom: 18px;
+    }
+
+    .logo {
+        font-size: 25px;
+    }
+
+    .intro {
+        padding: 65px 5px 55px;
+    }
+
+    .subtitle {
+        font-size: 9px;
+        letter-spacing: 2.5px;
+    }
+
+    .description {
+        font-size: 12px;
+    }
+
+    .section-heading h2 {
+        font-size: 17px;
+    }
+
+    .section-heading span {
+        font-size: 8px;
+    }
+
+    .member-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+    }
+
+    .photo-container {
+        height: 185px;
+    }
+
+    .member-info {
+        padding: 13px 11px;
+    }
+
+    .member-info h3 {
+        font-size: 14px;
+        line-height: 1.4;
+    }
+
+    .member-role {
+        font-size: 7px;
+        letter-spacing: 1px;
+    }
+
+    .member-status {
+        font-size: 8px;
+        padding: 5px 8px;
+    }
+
+    .member-number {
+        top: 9px;
+        left: 9px;
+        font-size: 8px;
+        padding: 5px 9px;
+    }
+
+    .view-icon {
+        width: 29px;
+        height: 29px;
+        right: 9px;
+        bottom: 9px;
+        font-size: 11px;
+    }
+
+    footer {
+        font-size: 7px;
+        letter-spacing: 0.7px;
+    }
+}

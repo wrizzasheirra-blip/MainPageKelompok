@@ -1,0 +1,265 @@
+/* ==============================
+   LOGIN PAGE - BASE STYLE
+================================ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    font-family: 'Poppins', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    transition: 0.5s ease;
+}
+
+.login-container {
+    width: 100%;
+    max-width: 420px;
+    padding: 40px 35px;
+    border-radius: 25px;
+    background: var(--card);
+    box-shadow: 0 15px 40px var(--shadow);
+    border: 1px solid var(--border);
+    text-align: center;
+    transition: 0.5s ease;
+}
+
+/* ==============================
+   PROFILE / INITIAL
+================================ */
+
+.profile-icon {
+    width: 90px;
+    height: 90px;
+    margin: 0 auto 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background: var(--accent);
+    color: var(--icon-text);
+    font-size: 32px;
+    font-weight: bold;
+    border: 4px solid var(--border);
+}
+
+h1 {
+    font-size: 25px;
+    margin-bottom: 8px;
+    color: var(--text);
+}
+
+.subtitle {
+    font-size: 13px;
+    margin-bottom: 30px;
+    color: var(--muted);
+}
+
+/* ==============================
+   INPUT FORM
+================================ */
+
+.input-group {
+    text-align: left;
+    margin-bottom: 18px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--text);
+}
+
+.input-group input {
+    width: 100%;
+    padding: 13px 15px;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    outline: none;
+    background: var(--input);
+    color: var(--text);
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.input-group input:focus {
+    border-color: var(--accent);
+    box-shadow: 0 0 0 3px var(--shadow);
+}
+
+/* ==============================
+   LOGIN BUTTON
+================================ */
+
+.login-button {
+    width: 100%;
+    padding: 14px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 12px;
+    background: var(--accent);
+    color: var(--button-text);
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.login-button:hover {
+    filter: brightness(0.92);
+    transform: translateY(-2px);
+}
+
+/* ==============================
+   MESSAGE
+================================ */
+
+#message {
+    margin-top: 18px;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--message);
+}
+
+#unavailable {
+    padding: 20px;
+    color: var(--text);
+}
+
+/* ==============================
+   WINTER - RIZZA
+================================ */
+
+body.winter {
+    --bg: linear-gradient(135deg, #dceeff, #f5faff, #c5dff5);
+    --card: #ffffff;
+    --text: #29445f;
+    --muted: #7892aa;
+    --accent: #8bbce5;
+    --border: #c8e0f5;
+    --input: #f4f9ff;
+    --shadow: rgba(78, 135, 180, 0.2);
+    --icon-text: #ffffff;
+    --button-text: #ffffff;
+    --message: #477fae;
+}
+
+/* ==============================
+   SUMMER - SALWA
+================================ */
+
+body.summer {
+    --bg: linear-gradient(135deg, #fff0b8, #ffdb9e, #ffb982);
+    --card: #fffaf0;
+    --text: #80502b;
+    --muted: #b18453;
+    --accent: #f5a34b;
+    --border: #f4d49e;
+    --input: #fff5e3;
+    --shadow: rgba(210, 133, 53, 0.2);
+    --icon-text: #ffffff;
+    --button-text: #ffffff;
+    --message: #b96c28;
+}
+
+/* ==============================
+   AUTUMN - FITRI
+================================ */
+
+body.autumn {
+    --bg: linear-gradient(135deg, #e9c6a4, #c98c65, #9d624b);
+    --card: #fff4e9;
+    --text: #70452f;
+    --muted: #a77b61;
+    --accent: #b86f43;
+    --border: #e3b995;
+    --input: #fffaf4;
+    --shadow: rgba(100, 57, 35, 0.2);
+    --icon-text: #ffffff;
+    --button-text: #ffffff;
+    --message: #98552f;
+}
+
+/* ==============================
+   SPRING - SIFA
+================================ */
+
+body.spring {
+    --bg: linear-gradient(135deg, #fbe0e9, #e4f4dc, #f7e6ef);
+    --card: #fffaff;
+    --text: #76566a;
+    --muted: #ad829b;
+    --accent: #d99ab8;
+    --border: #f0c9da;
+    --input: #fff5fa;
+    --shadow: rgba(190, 125, 155, 0.2);
+    --icon-text: #ffffff;
+    --button-text: #ffffff;
+    --message: #b45d88;
+}
+
+/* ==============================
+   DESERT - FABIAN
+================================ */
+
+body.desert {
+    --bg: linear-gradient(135deg, #f4dfb5, #dfbd83, #c69b66);
+    --card: #fff8e9;
+    --text: #705536;
+    --muted: #a98b62;
+    --accent: #bd9256;
+    --border: #e6c99b;
+    --input: #fffaf0;
+    --shadow: rgba(130, 94, 48, 0.2);
+    --icon-text: #ffffff;
+    --button-text: #ffffff;
+    --message: #946d3d;
+}
+
+/* ==============================
+   RAINY - ARYO
+================================ */
+
+body.rainy {
+    --bg: linear-gradient(135deg, #d6e2ed, #a9bdcf, #7d95aa);
+    --card: #f5f9fc;
+    --text: #354d63;
+    --muted: #7e93a6;
+    --accent: #6689a8;
+    --border: #c3d3e1;
+    --input: #edf4f9;
+    --shadow: rgba(47, 74, 99, 0.2);
+    --icon-text: #ffffff;
+    --button-text: #ffffff;
+    --message: #496b89;
+}
+
+/* ==============================
+   RESPONSIVE
+================================ */
+
+@media (max-width: 480px) {
+    .login-container {
+        padding: 32px 24px;
+    }
+
+    h1 {
+        font-size: 22px;
+    }
+
+    .profile-icon {
+        width: 80px;
+        height: 80px;
+        font-size: 28px;
+    }
+}

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Member Login | Group Directory</title>
+
+    <link rel="stylesheet" href="login.css">
+</head>
+
+<body>
+
+    <div class="background-grid"></div>
+
+    <main class="container">
+
+        <!-- HEADER -->
+        <header class="header">
+
+            <a href="index.html" class="logo">
+                GD<span>.</span>
+            </a>
+
+            <div class="system-status">
+                <span class="status-dot"></span>
+                SYSTEM ONLINE
+            </div>
+
+        </header>
+
+        <!-- LOGIN SECTION -->
+        <section class="login-section">
+
+            <div class="login-card">
+
+                <p class="subtitle">
+                    GROUP DIRECTORY / AUTHENTICATION
+                </p>
+
+                <!-- MEMBER INITIAL -->
+                <div class="avatar" id="initial">--</div>
+
+                <!-- MEMBER NAME -->
+                <h1 id="memberName">MEMBER LOGIN</h1>
+
+                <p class="description">
+                    Enter your credentials to access your profile.
+                </p>
+
+                <!-- UNAVAILABLE MESSAGE -->
+                <div id="unavailable" hidden>
+                    <h3>ACCOUNT NOT AVAILABLE</h3>
+                    <p>Data akun anggota ini belum tersedia.</p>
+                </div>
+
+                <!-- LOGIN FORM -->
+                <form id="loginForm">
+
+                    <div class="input-group">
+
+                        <label for="username">
+                            USERNAME
+                        </label>
+
+                        <input
+                            type="text"
+                            id="username"
+                            name="username"
+                            placeholder="Enter username"
+                            autocomplete="username"
+                            required
+                        >
+
+                    </div>
+
+                    <div class="input-group">
+
+                        <label for="password">
+                            PASSWORD
+                        </label>
+
+                        <input
+                            type="password"
+                            id="password"
+                            name="password"
+                            placeholder="Enter password"
+                            autocomplete="current-password"
+                            required
+                        >
+
+                    </div>
+
+                    <button type="submit">
+                        ACCESS PROFILE →
+                    </button>
+
+                    <!-- LOGIN MESSAGE -->
+                    <p id="message"></p>
+
+                </form>
+
+                <!-- BACK TO DIRECTORY -->
+                <a href="index.html" class="back-link">
+                    ← BACK TO DIRECTORY
+                </a>
+
+            </div>
+
+        </section>
+
+        <!-- FOOTER -->
+        <footer>
+            <span>GROUP DIRECTORY © 2026</span>
+            <span>BUILT WITH TECHNOLOGY.</span>
+        </footer>
+
+    </main>
+
+    <!-- JAVASCRIPT -->
+    <script src="script.js"></script>
+
+</body>
+</html>
